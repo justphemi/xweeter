@@ -1,0 +1,25 @@
+{
+  "name": "xweeter",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "testp": "node test-post.js",
+    "dev": "vercel dev",
+    "test": "node try.js",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "twitter-api-v2": "^1.27.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "vercel": "^37.14.0"
+  }
+}
