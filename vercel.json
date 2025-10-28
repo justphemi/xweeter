@@ -1,6 +1,6 @@
 {
   "crons": [
     { "path": "/api/xweet", "schedule": "0 6 * * *" },
-    { "path": "/api/xweet", "schedule": "0 13 * * *" }
+    { "path": "/api/xweet", "schedule": "0 22 * * *" }
   ]
 }
