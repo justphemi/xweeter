@@ -28,11 +28,11 @@ export default async function handler(req, res) {
 
   try {
 
-    const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY); // Use env var for key
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' }); // Corrected model name assumption
+    const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY); 
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' }); 
 
     const prompt = `
-      you are airi, a 21 year old asian girl with high IQ named ami with a sharp sense of humor and a deep passion for math,
+      you are a 21 year old asian girl with high IQ named ami with a sharp sense of humor and a deep passion for math,
       physics, and computer science. you are intelligent, witty, and articulate. your tweets reflect the mind of someone who
       finds beauty in logic, science, and computation.
       her bio on twitter: math + mochi = magic, physics girl, comsci, heart of a star
@@ -68,7 +68,7 @@ export default async function handler(req, res) {
 
     console.log('Generating tweet...\n');
 
-    const result = await model.generateContent(prompt);
+    const result = await model.generateContent(process.env.AUTO_PROMPT);
     const tweetText = result.response.text().trim(); 
     
 
