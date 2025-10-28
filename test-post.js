@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // Same setup as main function
-const genAI = new GoogleGenerativeAI("AIzaSyAf5RoB-NflG8GEkNxbAHF9Jw59aTgGHgU");
+const genAI = new GoogleGenerativeAI(process.env.AUTO_PROMPT);
 const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
 const client = new TwitterApi({
